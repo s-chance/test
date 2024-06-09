@@ -2,10 +2,12 @@ spring:
   application:
     name: hello-world
   datasource:
-    url: jdbc:h2:file:./data/demo
+    url: jdbc:h2:mem:test
     username: sa
     password: password
     driver-class-name: org.h2.Driver
+    schema:
+      - classpath:schema.sql
   h2:
     console:
       enabled: true
